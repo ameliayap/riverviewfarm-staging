@@ -71,17 +71,16 @@
         position:absolute;
         left:50%; /* centers the loading animation horizontally one the screen */
         top:50%; /* centers the loading animation vertically one the screen */
-        background-image:url(./images/status.gif); /* path to your loading animation */
+        background-image:url(./images/loading.gif); /* path to your loading animation */
         background-repeat:no-repeat;
         background-position:center;
         margin:-100px 0 0 -100px; /* is width and height divided by two */
       }
-
     </style>
   </head>
   <body>
-    <!-- Preloader -->
 
+    <!-- Preloader -->
     <div id="preloader">
         <div id="status"></div>
     </div>
@@ -154,7 +153,9 @@
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
-    <script>
+    
+   <script>
+        //Giving preloader enough time to render
         $(window).on("load",function(){
         $('#status').delay(300).fadeOut(); 
         $('#preloader').delay(300).fadeOut('slow');
