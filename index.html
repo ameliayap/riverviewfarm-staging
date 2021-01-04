@@ -36,28 +36,21 @@
         color: #99581E;
       }
       .container-fluid {
-        padding-left: 0;
-        padding-right: 0;
         background-color: #fefae0;
       }
-      @media only screen and (min-width: 1920px) {
+      @media only screen and (min-width: 1280px) {
         .container-fluid {
-          max-width: 1920px;
+          max-width: 1280px;
         }
       }
-      .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 980px;
-      }
       #carousel-item-1 {
-        background-image: url('images/herobackground2.jpg');
+        background-image: url('images/herobackground.jpg');
       }
       #carousel-item-2 {
         background-image: url('images/herobackground.jpg');
       }
       #carousel-item-3 {
-        background-image: url('images/herobackground3.jpg');
+        background-image: url('images/herobackground.jpg');
       }
       .carousel-item {
         height: 400px;
@@ -68,18 +61,14 @@
       .carousel-item > img {
         visibility: hidden;
       }
-      /* #hero {
-        height: 400px;
-        background-image: url('images/herobackground2.jpg');
-        background-position: center bottom;
-        background-size: cover;
-        position: relative;
-        text-align:center;
-      } */
+      .col-center {
+        float: none;
+        margin: 0 auto;
+      }
       #hero-text {
         top: 100px;
         color: #fefae0;
-        text-shadow: 2px 2px #99581E;
+        text-shadow: 4px 2px #283618;
         position: absolute;
         width: 100%;
       }
@@ -95,10 +84,15 @@
         height: 40px;
         margin-top: -40px;
       }
-      .row {
+      .container-fluid > .row {
         padding: 3rem;
       }
-
+      .pickup-location-map {
+        padding: .25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: .25rem;
+      }
       /* Preloader */
       #preloader {
         position: fixed;
@@ -132,7 +126,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        max-width: 1920px;
+        max-width: 1280px;
       }
 
       /*For the contact form*/
@@ -140,73 +134,86 @@
           font-size: 35px;
           color: #DDA15E;
           margin-top:10px;
+          margin-bottom:10px;
       }
 
       .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
           background-color: #99581e !important;
           margin-top:10px;
       }
+
+      th { text-align: left; }
+      
+      .box { 
+        display:inline-block; 
+      }
+ 
     </style>
   </head>
   
   <body>
-    <!-- Preloader -->
+    <!-- Preloader 
     <div id="preloader">
         <div id="status"></div>
     </div>
+    -->
+    <!-- Hero section -->
+    <div id="carouselExampleControls" class="carousel slide container-fluid px-0" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div id="carousel-item-1" class="carousel-item"></div>
+        <div id="carousel-item-2" class="carousel-item active"></div>
+        <div id="carousel-item-3" class="carousel-item"></div>
+      </div>
+      <div id="hero-text">
+        <h1 class="display-4 text-center">Riverview Farm</h1>
+        <p class="lead text-center">
+          <a href="https://goo.gl/maps/s19UbpHd9cpuCYDe9"><i class="fas fa-map-marker-alt"></i> Chilliwack, BC</a>
+        </p>
+        <p class="lead text-center">
+          <a href="tel:+1-778-386-9822"><i class="fas fa-phone-alt"></i> (778) 386-9822</a>
+        </p>
+      </div>
+      <!-- Menu section -->
+      <div id="navbar" class="d-flex bd-highlight">
+        <a href="#about" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-info-circle"></i> <span class="d-none d-sm-inline">About</span></a>
+        <a href="#product" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-shopping-cart"></i> <span class="d-none d-sm-inline">Products</span></a>
+        <a href="#pickup" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-map-marker-alt"></i> <span class="d-none d-sm-inline">Pickup Locations</span></a>
+        <a href="#contact" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-address-book"></i> <span class="d-none d-sm-inline">Contact Us</span></a>
+        <a href="#photos" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-image"></i> <span class="d-none d-sm-inline">Photos</span></a>
+      </div>
+    </div>
 
+    <!-- Start of sections -->
     <div class="container-fluid">
-      <!-- Hero section -->
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div id="carousel-item-1" class="carousel-item"></div>
-          <div id="carousel-item-2" class="carousel-item active"></div>
-          <div id="carousel-item-3" class="carousel-item"></div>
-        </div>
-        <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a> -->
-        <div id="hero-text">
-          <h1 class="display-4 text-center">Riverview Farm</h1>
-          <p class="lead text-center">
-            <a href="https://goo.gl/maps/MuyNu7CN2zfbTUCS7"><i class="fas fa-map-marker-alt"></i> Chilliwack, BC</a>
-          </p>
-          <p class="lead text-center">
-            <a href="tel:+1-778-123-1234"><i class="fas fa-phone-alt"></i> 778-123-1234</a>
-          </p>
-        </div>
-        <!-- Menu section -->
-        <div id="navbar" class="d-flex bd-highlight">
-          <a href="#about" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-info-circle"></i> About</a>
-          <a href="#product" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-egg"></i> Product</a>
-          <a href="#contact" class="p-2 flex-fill bd-highlight text-center"><i class="fas fa-address-book"></i> Contact</a>
-        </div>
-      </div>    
-      <!-- <div id="hero">
-        <div id="hero-text">
-            <h1 class="display-4 text-center">Riverview Farm</h1>
-            <p class="lead text-center">
-              <a href="https://goo.gl/maps/MuyNu7CN2zfbTUCS7"><i class="fas fa-map-marker-alt"></i> Chilliwack, BC</a>
-            </p>
-            <p class="lead text-center">
-              <a href="tel:+1-778-123-1234"><i class="fas fa-phone-alt"></i> 778-123-1234</a>
-            </p>
-        </div>
-      </div> -->
-
+      
       <!-- About section -->
       <div id="about" class="row">
         <div class="col-md-5 mb-3">
           <img src="images/hello.jpg" class="img-thumbnail">
-        </div>
+        </div>        
+
         <div class="col-md-7">
           <h2>About</h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead">
+          We are a small family farm that specializes in fresh, free range chicken eggs. Our hens are happy and well-fed with a high-quality diet, which means they produce healthier and tastier eggs for you to enjoy!
+          </p>
+
+          <p class="lead">
+          We are a family-run farm, so please call ahead to ensure there will be someone to greet you when you arrive! Our phone lines are open during these hours:
+          </p>
+
+          <p><table class='lead'>
+            <tr><th>Sun</th><td>Closed</td></tr>
+            <tr><th>Mon</th><td>9am - 5pm</td></tr>
+            <tr><th>Tues</th><td>9am - 5pm</td></tr>
+            <tr><th>Wed</th><td>9am - 5pm</td></tr>
+            <tr><th>Thurs </th><td>9am - 5pm</td></tr>
+            <tr><th>Fri</th><td>9am - 5pm</td></tr>
+            <tr><th>Sat</th><td>9am - 5pm</td></tr>
+          </table></p>
+
+          <p class="lead"><i class="fas fa-phone-alt"></i> (778) 386-9822</p>
+          <p class="lead"><i class="fas fa-map-marker-alt"></i> 42831 Old Orchard Road<br>Chilliwack, BC</p>
         </div>
       </div>
 
@@ -215,18 +222,40 @@
       <!-- Product section -->
       <div id="product" class="row">
         <h2 class="mb-4 text-center">Our Products</h2>
-        <div class="col-lg-4">
-          <h5>Heading</h5>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <div class="mb-4 text-center">
+          <h5>Free Range Eggs, $5/dozen</h5>
         </div>
-        <div class="col-lg-4">
-          <h5>Heading</h5>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+        <div class="col-md-4 mb-3">
+          <img src="images/eggs.png" class="img-thumbnail">
+        </div>        
+        <div class="col-md-4 mb-3">
+          <img src="images/eggs3.png" class="img-thumbnail">
+        </div>     
+        <div class="col-md-4 mb-3">
+          <img src="images/fried.png" class="img-thumbnail">
+        </div>  
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Pickup Locations Section-->
+      <div id="pickup" class="row">
+        <h2 class="mb-4 text-center">Pickup Locations</h2>
+        <div class="box col-md-6 mb-3">
+          <iframe class="pickup-location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.331443111019!2d-122.04179048484289!3d49.1563167793178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843894af870769%3A0x7a294574a59da416!2s42831%20Old%20Orchard%20Rd%2C%20Chilliwack%2C%20BC%20V2R%204A6!5e0!3m2!1sen!2sca!4v1609726657373!5m2!1sen!2sca" frameborder="0" scrolling="no" width="100%" height="512px" align="left"></iframe>
         </div>
-        <div class="col-lg-4">
-          <h5>Heading</h5>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="box col-md-6 mb-3">
+          <iframe class="pickup-location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.821132655744!2d-123.140851584838!3d49.260836079328925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673b8b69f03f9%3A0xa33d9fa98c790c16!2sGranville%20St%20%26%20W%2012th%20Ave%2C%20Vancouver%2C%20BC%20V6H%201M7!5e0!3m2!1sen!2sca!4v1609726728083!5m2!1sen!2sca" frameborder="0" scrolling="no" width="100%" height="512px" align="left"></iframe>
         </div>
+        <!--Map section -->
+        <!-- <div class=non-floater>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83530.61213274766!2d-122.01989556706411!3d49.137327629745265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843f9d75e9f3a7%3A0x1d49386fd2f9a230!2sChilliwack%2C%20BC!5e0!3m2!1sen!2sca!4v1609553963950!5m2!1sen!2sca"></iframe>
+        </div> -->
+<!-- 
+        <div class=non-floater>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1r--AhSAZTKbHVnqyqbcy--_y4nGq4y7V"></iframe>
+        </div> -->
       </div>
 
       <hr class="featurette-divider">
@@ -234,84 +263,99 @@
       <!-- Contact section -->
       <div id="contact" class="row">
         <h2 class='text-center'>Contact Us</h2>
-        <!--
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemu2zADamvisXyXNC-Ap2re8PmTihMmfFfrjD0N0ilZaQByA/viewform?embedded=true" width="640" height="939" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <p class="text-center mt-4"><i class="fas fa-phone-alt"></i> (778) 386-9822</p>
+          <p class="text-center"><i class="fas fa-map-marker-alt"></i> 42831 Old Orchard Road<br>Chilliwack, BC</p>
+          <p class='text-center mb-4'>We’d love to hear from you!  If you have any questions for us, please leave us a note below, and we will get back to you as soon as possible.</p>
             
         <!---Contact Form-->
         
-      <!-- <div class="container"> -->
-          <!-- <div class="row"> -->
-              <div class="col-md-12">
-                  <div class="well well-sm">
-                      <form class="form-horizontal" method="post">
-                          <fieldset>
-                              <div class="form-group">
-                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                                  <div class="col-md-8">
-                                      <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                                  <div class="col-md-8">
-                                      <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope bigicon"></i></span>
-                                  <div class="col-md-8">
-                                      <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-                                  <div class="col-md-8">
-                                      <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                                  <div class="col-md-8">
-                                      <textarea class="form-control" id="message" name="message" placeholder="Enter your message for us here. We will get back to you within 2 business days." rows="7"></textarea>
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <div class="col-md-12 text-center">
-                                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                                  </div>
-                              </div>
-                          </fieldset>
-                      </form>
+        <div class="col-lg-10 col-xl-6 col-center">
+          <div class="well well-sm">
+            <form id="contact-form" class="form-horizontal" method="post">
+              <fieldset>
+                <div class="form-group row">
+                  <span class="col-2 col-sm-1 text-center"><i class="fa fa-user bigicon"></i></span>
+                  <div class="col-10 col-sm-11">
+                    <input id="name" name="name" type="text" placeholder="Name" class="form-control">
                   </div>
-              </div>
-          <!-- </div> -->
-      <!-- </div> -->
-        
+                </div>
 
+                <div class="form-group row">
+                  <span class="col-2 col-sm-1 text-center"><i class="fa fa-envelope bigicon"></i></span>
+                  <div class="col-10 col-sm-11">
+                    <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <span class="col-2 col-sm-1 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                  <div class="col-10 col-sm-11">
+                    <input id="phoneNumber" name="phoneNumber" type="text" placeholder="Phone" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <span class="col-2 col-sm-1 text-center"><i class="fa fa-pen bigicon"></i></span>
+                  <div class="col-10 col-sm-11">
+                    <textarea class="form-control" id="comment" name="comment" placeholder="Enter your message for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12 mt-2 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div> <!--This is the closing for the div id=contact-->
 
-      <!-- Map section -->
-        <div class=non-floater>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83530.61213274766!2d-122.01989556706411!3d49.137327629745265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843f9d75e9f3a7%3A0x1d49386fd2f9a230!2sChilliwack%2C%20BC!5e0!3m2!1sen!2sca!4v1609553963950!5m2!1sen!2sca"></iframe>
+      <hr class="featurette-divider">
+
+      <!--Photos Section-->
+
+      <div id="photos" class="row">
+        <h2 class="mb-4 text-center">Photos</h2>
+          <div class="mb-4 text-center">
+          <h5>Meet some of our hens!</h5>
         </div>
 
+        <div class="col-md-4 mb-3">
+          <img src="images/walking.png" class="img-thumbnail">
+        </div>        
+        <div class="col-md-4 mb-3">
+          <img src="images/coop.png" class="img-thumbnail">
+        </div>   
+        <div class="col-md-4 mb-3">
+          <img src="images/outdoor.png" class="img-thumbnail">
+        </div>
+      </div>
 
-
-      <!-- Footer -->
+      <!-- Footer 
       <footer class="row">
-        <p class="text-muted">Copyright © 2021 Riverview Farm, Chilliwack BC, Canada</p>
-      </footer>
+        <p class="text-muted text-center">Copyright © 2021 Riverview Farm, Chilliwack BC, Canada</p>
+      </footer> -->
+
+      <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">Copyright © 2021 Riverview Farm, Chilliwack BC, Canada</span>
+      </div>
+    </footer>
+      
     </div>
+
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+    <script src="jquery.serializejson.js"></script>
     
    <script>
+
+     const SUBMIT_FORM_URL = "https://us-west2-riverviewfarm.cloudfunctions.net/send-contact-email";
+
       /* This is for preloader chicken animation */
       //Giving preloader enough time to render
       $(window).on("load",function(){
@@ -338,6 +382,28 @@
           navbar.classList.remove("sticky");
         }
       }
+
+      $('#contact-form').on('submit', function(e){
+        const data = $('#contact-form').serializeJSON();
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          processData: false,
+          url: SUBMIT_FORM_URL,
+          crossDomain: true,
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify(data),
+          success: function(res) {
+            $('#contact-form').trigger("reset");
+            alert('Thank you! Your message has been successfully submitted.');
+          },
+          error: function(error) {
+            console.log(error.status);
+            console.log(error.responseText);
+            alert(`Oops! There was a problem sending your message. ${error.status}: ${error.responseText}`);
+          }
+        });
+      });
     </script>
 
   </body>
