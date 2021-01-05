@@ -136,13 +136,8 @@
           margin-top:10px;
           margin-bottom:10px;
       }
-
-      //Overriding submit button color for color theme
-      .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-          background-color: #99581e !important;
-          margin-top:10px;
-      }
-      //For business hours table
+      
+      /*For business hours table*/
       th { text-align: left; }
       
       /*To help align the maps */
@@ -150,28 +145,21 @@
         display:inline-block; 
       }
 
-      /*To remove arrows in number field for phone contact form*/
-      /* Chrome, Safari, Edge, Opera */
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      /* Firefox */
-      input[type=number] {
-        -moz-appearance: textfield;
+      /*Overriding submit button color for color theme*/
+      .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+          background-color: #99581e !important;
+          border-color: #99581e !important;
       }
  
     </style>
   </head>
   
   <body>
-    <!-- Preloader 
+    <!-- Preloader -->
     <div id="preloader">
         <div id="status"></div>
     </div>
-    -->
+    
     <!-- Hero section -->
     <div id="carouselExampleControls" class="carousel slide container-fluid px-0" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -410,7 +398,7 @@
           data: JSON.stringify(data),
           success: function(res) {
             $('#contact-form').trigger("reset");
-            alert('Thank you! Your message has been successfully submitted.');
+            alert('Thank you! Your message has been successfully sent.');
           },
           error: function(error) {
             console.log(error.status);
