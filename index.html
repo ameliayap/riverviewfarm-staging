@@ -14,144 +14,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Riverview Farm BC</title>
-
-    <!-- Repl has a bug with loading css and js files - so doing this for now -->
     <!-- COLOR PALETTE: https://coolors.co/606c38-283618-fefae0-dda15e-99581e -->
-    <style>
-      body {
-        font-family: 'Merriweather', serif !important;
-        background-color: #283618;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      a:hover {
-        text-decoration: none;
-        color: #DDA15E;
-      }
-      h2 {
-        color: #99581E;
-      }
-      .container-fluid {
-        background-color: #fefae0;
-      }
-      @media only screen and (min-width: 1280px) {
-        .container-fluid {
-          max-width: 1280px;
-        }
-      }
-      #carousel-item-1 {
-        background-image: url('images/herobackground.jpg');
-      }
-      #carousel-item-2 {
-        background-image: url('images/herobackground.jpg');
-      }
-      #carousel-item-3 {
-        background-image: url('images/herobackground.jpg');
-      }
-      .carousel-item {
-        height: 400px;
-        width: 100%;
-        background-position: center bottom;
-        background-size: cover;
-      }
-      .carousel-item > img {
-        visibility: hidden;
-      }
-      .col-center {
-        float: none;
-        margin: 0 auto;
-      }
-      #hero-text {
-        top: 100px;
-        color: #fefae0;
-        text-shadow: 4px 2px #283618;
-        position: absolute;
-        width: 100%;
-      }
-      #navbar {
-        background-color: rgba(96, 108, 56, 0.8);
-        color: #fefae0;
-      }
-      #navbar .p-2:hover {
-        background-color: #fefae0;
-      }
-      #navbar:not(.sticky) {
-        position: relative;
-        height: 40px;
-        margin-top: -40px;
-      }
-      .container-fluid > .row {
-        padding: 3rem;
-      }
-      .pickup-location-map {
-        padding: .25rem;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: .25rem;
-      }
-      /* Preloader */
-      #preloader {
-        position: fixed;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        background-color:#fff; /* change if the mask should have another color then white */
-        z-index:99; /* makes sure it stays on top */
-      }
-
-      #status {
-        width:200px;
-        height:200px;
-        position:absolute;
-        left:50%; /* centers the loading animation horizontally one the screen */
-        top:50%; /* centers the loading animation vertically one the screen */
-        background-image:url(images/loading.gif); /* path to your loading animation */
-        background-repeat:no-repeat;
-        background-position:center;
-        margin:-100px 0 0 -100px; /* is width and height divided by two */
-      }
-
-      /*For the map iframe*/
-      .floater { float:left; }
-      .non-floater { overflow:hidden; }
-      iframe { width:100%; padding:0; border:0; height:500px; }
-
-      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-      .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: 1280px;
-      }
-
-      /*For the contact form*/
-      .bigicon {
-          font-size: 35px;
-          color: #DDA15E;
-          margin-top:10px;
-          margin-bottom:10px;
-      }
-      
-      /*For business hours table*/
-      th { text-align: left; }
-      
-      /*To help align the maps */
-      .box { 
-        display:inline-block; 
-      }
-
-      /*Overriding submit button color for color theme*/
-      .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-          background-color: #99581e !important;
-          border-color: #99581e !important;
-      }
- 
-    </style>
   </head>
   
   <body>
@@ -163,9 +30,9 @@
     <!-- Hero section -->
     <div id="carouselExampleControls" class="carousel slide container-fluid px-0" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div id="carousel-item-1" class="carousel-item"></div>
+        <!-- <div id="carousel-item-1" class="carousel-item"></div> -->
         <div id="carousel-item-2" class="carousel-item active"></div>
-        <div id="carousel-item-3" class="carousel-item"></div>
+        <!-- <div id="carousel-item-3" class="carousel-item"></div> -->
       </div>
       <div id="hero-text">
         <h1 class="display-4 text-center">Riverview Farm</h1>
@@ -210,7 +77,7 @@
             <tr><th>Mon</th><td>9am - 5pm</td></tr>
             <tr><th>Tues</th><td>9am - 5pm</td></tr>
             <tr><th>Wed</th><td>9am - 5pm</td></tr>
-            <tr><th>Thurs </th><td>9am - 5pm</td></tr>
+            <tr><th>Thurs  </th><td>9am - 5pm</td></tr>
             <tr><th>Fri</th><td>9am - 5pm</td></tr>
             <tr><th>Sat</th><td>9am - 5pm</td></tr>
           </table></p>
@@ -251,14 +118,6 @@
         <div class="box col-md-6 mb-3">
           <iframe class="pickup-location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.821132655744!2d-123.140851584838!3d49.260836079328925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673b8b69f03f9%3A0xa33d9fa98c790c16!2sGranville%20St%20%26%20W%2012th%20Ave%2C%20Vancouver%2C%20BC%20V6H%201M7!5e0!3m2!1sen!2sca!4v1609726728083!5m2!1sen!2sca" frameborder="0" scrolling="no" width="100%" height="512px" align="left"></iframe>
         </div>
-        <!--Map section -->
-        <!-- <div class=non-floater>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83530.61213274766!2d-122.01989556706411!3d49.137327629745265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843f9d75e9f3a7%3A0x1d49386fd2f9a230!2sChilliwack%2C%20BC!5e0!3m2!1sen!2sca!4v1609553963950!5m2!1sen!2sca"></iframe>
-        </div> -->
-<!-- 
-        <div class=non-floater>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1r--AhSAZTKbHVnqyqbcy--_y4nGq4y7V"></iframe>
-        </div> -->
       </div>
 
       <hr class="featurette-divider">
@@ -271,7 +130,6 @@
           <p class='text-center mb-4'>We’d love to hear from you!  If you have any questions for us, please leave us a note below, and we will get back to you as soon as possible.</p>
             
         <!---Contact Form-->
-        
         <div class="col-lg-10 col-xl-6 col-center">
           <div class="well well-sm">
             <form id="contact-form" class="form-horizontal" method="post">
@@ -324,7 +182,7 @@
           <div class="mb-4 text-center">
           <h5>Meet some of our hens!</h5>
         </div>
-
+        <!--
         <div class="col-md-4 mb-3">
           <img src="images/walking.png" class="img-thumbnail">
         </div>        
@@ -334,80 +192,29 @@
         <div class="col-md-4 mb-3">
           <img src="images/outdoor.png" class="img-thumbnail">
         </div>
+      </div>-->
+
+      <div id='tabIndex' class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+        data-link="https://photos.app.goo.gl/GshwnHbje7XCxkFG6"
+        data-title="Riverview Farm BC "
+        data-description="3 new photos added to shared album">
+        <object data="https://lh3.googleusercontent.com/3qXqfRvul1-H8HPzS-b1DwixJMjXiy33n2xI_Oyoky6oPbzBZNCJN90avZCOb3zqfHnd1N5jbHrEn0ofZx-pSWTfjHpZn0rQd9eioC6uE7yILiw6SxFlKCqqtMwMTLa0juW6njgPTaM=w1920-h1080"></object>
+        <object data="https://lh3.googleusercontent.com/3aM3nEPnNEUWw5iatYUdP2Tcx6a69iYhK2MicEe_QALG7k2TQzI_LecqC_SIgBBlZZOwoHdohlNRdxuJq-wlRwYmu-LNpNud6fpxyDNuFEZJ4euhUUbdrjG9vKzSNKGoDEWR-8ZUCxw=w1920-h1080"></object>
+        <object data="https://lh3.googleusercontent.com/h_FzTz9tRfl2qwObnY4NeEGPDgjLDDEX_hqvX4W-fT55yD8xiB4m_zHJiu3KS4ehgxdjA7ROwq2kVrm57PTM-D40-O3PEw0Z0zfhQBSzRKvsEIJ0kVEbqGxrMJcSbdF3prXaYe9AB3w=w1920-h1080"></object>
       </div>
 
-      <!-- Footer 
-      <footer class="row">
-        <p class="text-muted text-center">Copyright © 2021 Riverview Farm, Chilliwack BC, Canada</p>
-      </footer> -->
-
-      <footer class="footer">
-      <div class="container text-center">
+      <!-- Footer -->
+      <footer class="footer row text-center">
         <span class="text-muted">Copyright © 2021 Riverview Farm, Chilliwack BC, Canada</span>
-      </div>
-    </footer>
+      </footer>
       
     </div>
 
-
     <!-- Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
-    <script src="jquery.serializejson.js"></script>
-    
-   <script>
-
-     const SUBMIT_FORM_URL = "https://us-west2-riverviewfarm.cloudfunctions.net/send-contact-email";
-
-      /* This is for preloader chicken animation */
-      //Giving preloader enough time to render
-      $(window).on("load",function(){
-      $('#status').delay(300).fadeOut(); 
-      $('#preloader').delay(300).fadeOut('slow');
-      $('body').delay(550).css({'overflow':'visible'});
-      });
-
-      /* This is for the sticky navbar */
-      // When the user scrolls the page, execute myFunction
-      window.onscroll = function() {myFunction()};
-
-      // Get the navbar
-      var navbar = document.getElementById("navbar");
-
-      // Get the offset position of the navbar
-      var sticky = navbar.offsetTop;
-
-      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-
-      $('#contact-form').on('submit', function(e){
-        const data = $('#contact-form').serializeJSON();
-        e.preventDefault();
-        $.ajax({
-          type: "POST",
-          processData: false,
-          url: SUBMIT_FORM_URL,
-          crossDomain: true,
-          contentType: "application/json; charset=utf-8",
-          data: JSON.stringify(data),
-          success: function(res) {
-            $('#contact-form').trigger("reset");
-            alert('Thank you! Your message has been successfully sent.');
-          },
-          error: function(error) {
-            console.log(error.status);
-            console.log(error.responseText);
-            alert(`Oops! There was a problem sending your message. ${error.status}: ${error.responseText}`);
-          }
-        });
-      });
-    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="jquery.serializejson.min.js"></script>
+    <script src="script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 
   </body>
 </html>

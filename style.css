@@ -1,0 +1,134 @@
+body {
+  font-family: 'Noto Sans', sans-serif !important;
+  background-color: #283618;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: #DDA15E;
+}
+h2 {
+  color: #99581E;
+}
+.container-fluid {
+  background-color: #fefae0;
+}
+@media only screen and (min-width: 1280px) {
+  .container-fluid {
+    max-width: 1280px;
+  }
+}
+#carousel-item-1 {
+  background-image: url('images/herobackground.jpg');
+}
+#carousel-item-2 {
+  background-image: url('images/herobackground.jpg');
+}
+#carousel-item-3 {
+  background-image: url('images/herobackground.jpg');
+}
+.carousel-item {
+  height: 400px;
+  width: 100%;
+  background-position: center bottom;
+  background-size: cover;
+}
+.carousel-item > img {
+  visibility: hidden;
+}
+.col-center {
+  float: none;
+  margin: 0 auto;
+}
+#hero-text {
+  top: 100px;
+  color: #fefae0;
+  text-shadow: 2px 2px #283618;
+  font-family: 'Montaga', serif !important;
+  position: absolute;
+  width: 100%;
+}
+#navbar {
+  background-color: rgba(96, 108, 56, 0.8);
+  color: #fefae0;
+}
+#navbar .p-2:hover {
+  background-color: #fefae0;
+}
+#navbar:not(.sticky) {
+  position: relative;
+  height: 40px;
+  margin-top: -40px;
+}
+.container-fluid > .row {
+  padding: 3rem;
+}
+.pickup-location-map {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+}
+/* Preloader */
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; /* change if the mask should have another color then white */
+  z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:50%; /* centers the loading animation horizontally one the screen */
+  top:50%; /* centers the loading animation vertically one the screen */
+  background-image:url(images/loading.gif); /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+/*For the map iframe*/
+.floater { float:left; }
+.non-floater { overflow:hidden; }
+iframe { width:100%; padding:0; border:0; height:500px; }
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1280px;
+}
+
+/*For the contact form*/
+.bigicon {
+    font-size: 35px;
+    color: #DDA15E;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*For business hours table*/
+th { 
+  text-align: left; 
+  border: 0.5rem solid transparent;
+  }
+
+/*To help align the maps */
+.box { 
+  display:inline-block; 
+}
+
+/*Overriding submit button color for color theme*/
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #99581e !important;
+    border-color: #99581e !important;
+}
